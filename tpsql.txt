@@ -1,0 +1,14 @@
+exercice 2
+1) 198 identifiants dans la table tpcsv_eta_brut
+select count(distinct IDENTIFIANT) 
+from TPCSV_ETA_BRUT;
+
+select identifiant, count(libelle) 
+from TPCSV_ETA_BRUT
+group by identifiant
+having count(LIBELLE)>1;
+
+2)
+
+delete from TPCSV_ETA_BRUT
+where IDENTIFIANT is null;
